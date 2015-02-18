@@ -1,3 +1,42 @@
 [submodule "third-party/shapelib"]
 	path = third-party/shapelib
 	url = https://github.com/mousebird/shapelib.git
+[submodule "third-party/boost"]
+	path = third-party/boost
+	url = https://github.com/mousebird/boost.git
+[submodule "third-party/proj-4"]
+	path = third-party/proj-4
+	url = https://github.com/mousebird/proj-4.git
+[submodule "third-party/AFNetworking"]
+	path = third-party/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking
+[submodule "third-party/libjson"]
+	path = third-party/libjson
+	url = https://github.com/mousebird/libjson.git
+[submodule "third-party/glues"]
+	path = third-party/glues
+	url = https://github.com/lunixbochs/glues.git
+[submodule "third-party/KissXML"]
+	path = third-party/KissXML
+	url = https://github.com/mousebird/KissXML.git
+[submodule "third-party/AFKissXMLRequestOperation"]
+	path = third-party/AFKissXMLRequestOperation
+	url = https://github.com/AFNetworking/AFKissXMLRequestOperation.git
+[submodule "third-party/fmdb"]
+	path = third-party/fmdb
+	url = https://github.com/ccgus/fmdb.git
+[submodule "third-party/SMCalloutView"]
+	path = third-party/SMCalloutView
+	url = https://github.com/nfarina/calloutview.git
+[submodule "third-party/tinyxml2"]
+	path = third-party/tinyxml2
+	url = https://github.com/leethomason/tinyxml2
+[submodule "third-party/eigen"]
+	path = third-party/eigen
+	url = https://github.com/RLovelett/eigen
+[submodule "third-party/clipper"]
+	path = third-party/clipper
+	url = https://github.com/mousebird/clipper
+[submodule "resources"]
+	path = resources
+	url = https://github.com/mousebird/wg-resources-new.git
