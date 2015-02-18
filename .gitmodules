@@ -1,0 +1,3 @@
+[submodule "third-party/shapelib"]
+	path = third-party/shapelib
+	url = https://github.com/mousebird/shapelib.git
