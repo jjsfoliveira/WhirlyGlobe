@@ -1,4 +1,4 @@
-Pod::Spec.new do |s| 
+Pod::Spec.new do |s|
   s.name         = "WhirlyGlobe"
   s.version      = "2.1"
   s.summary      = "WhirlyGlobe is a self contained 3D earth display view suitable for use in iPhone and iPad applications."
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.preferred_dependency = 'Component'
 
-  s.platform	 = :ios, '5.0'
+  s.platform   = :ios, '5.0'
   
   s.requires_arc = true
 
@@ -18,6 +18,9 @@ Pod::Spec.new do |s|
     headers.public_header_files = "WhirlyGlobeSrc/{WhirlyGlobeLib,WhirlyGlobe-MaplyComponent}/include/*.h"
 
     headers.dependency 'eigen'
+    headers.dependency 'boost/shared_ptr-includes'
+    headers.dependency 'boost/pointer_cast-includes'
+    headers.dependency 'boost/math-includes'
   end
 
   s.subspec 'Lib' do |lib|
