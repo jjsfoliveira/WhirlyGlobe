@@ -117,6 +117,9 @@
         ],
         "FMDB": [
 
+        ],
+         "GoogleProtobuf": [
+
         ]
       },
       "libraries": "z"
