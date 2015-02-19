@@ -10,7 +10,7 @@
     "Steve Gifford": "sjg@mousebirdconsulting.com"
   },
   "source": {
-    "path": "https://github.com/jjsfoliveira/WhirlyGlobe.git"
+    "git": "https://github.com/jjsfoliveira/WhirlyGlobe.git"
   },
   "default_subspecs": "MaplyComponent",
   "platforms": {
