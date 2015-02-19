@@ -30,6 +30,7 @@ Pod::Spec.new do |s|
     lib.dependency 'proj4'
     lib.dependency 'shapelib'
     lib.dependency 'clipper'
+    lib.dependency 'eigen'
 
     lib.library    =  'stdc++', 'sqlite3'
   end
