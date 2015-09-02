@@ -31,49 +31,49 @@ static float PolyScale = 1e14;
 // Clip the given loop to the given MBR
 bool ClipLoopToMbr(const VectorRing &ring,const Mbr &mbr, const bool closed,std::vector<VectorRing> &rets)
 {
-    Path subject(ring.size());
-    for (unsigned int ii=0;ii<ring.size();ii++)
-    {
-        const Point2f &pt = ring[ii];
-        subject[ii] = IntPoint(pt.x()*PolyScale,pt.y()*PolyScale);
-    }
-    Path clip(4);
-    clip[0] = IntPoint(mbr.ll().x()*PolyScale,mbr.ll().y()*PolyScale);
-    clip[1] = IntPoint(mbr.ur().x()*PolyScale,mbr.ll().y()*PolyScale);
-    clip[2] = IntPoint(mbr.ur().x()*PolyScale,mbr.ur().y()*PolyScale);
-    clip[3] = IntPoint(mbr.ll().x()*PolyScale,mbr.ur().y()*PolyScale);
-    
-    Clipper c;
-    c.AddPath(subject, ptSubject, closed);
-    c.AddPath(clip, ptClip, true);
-    Paths solution;
-  
-    if(!closed)
-    {
-        PolyTree polyTreeSolution = *new PolyTree();
-        c.Execute(ctIntersection, polyTreeSolution, pftEvenOdd, pftEvenOdd);
-        PolyTreeToPaths(polyTreeSolution, solution);
-    } else
-    {
-        if (!c.Execute(ctIntersection, solution))
-        {
-            return false;
-        }
-    }
-    
-    for (unsigned int ii=0;ii<solution.size();ii++)
-    {
-        Path &outPoly = solution[ii];
-        VectorRing outRing;
-        for (unsigned jj=0;jj<outPoly.size();jj++)
-        {
-            IntPoint &outPt = outPoly[jj];
-            outRing.push_back(Point2f(outPt.X/PolyScale,outPt.Y/PolyScale));
-        }
-     
-        if ((closed && outRing.size() > 2) || (!closed && outRing.size() > 1))
-            rets.push_back(outRing);
-    }
+//    Path subject(ring.size());
+//    for (unsigned int ii=0;ii<ring.size();ii++)
+//    {
+//        const Point2f &pt = ring[ii];
+//        subject[ii] = IntPoint(pt.x()*PolyScale,pt.y()*PolyScale);
+//    }
+//    Path clip(4);
+//    clip[0] = IntPoint(mbr.ll().x()*PolyScale,mbr.ll().y()*PolyScale);
+//    clip[1] = IntPoint(mbr.ur().x()*PolyScale,mbr.ll().y()*PolyScale);
+//    clip[2] = IntPoint(mbr.ur().x()*PolyScale,mbr.ur().y()*PolyScale);
+//    clip[3] = IntPoint(mbr.ll().x()*PolyScale,mbr.ur().y()*PolyScale);
+//    
+//    Clipper c;
+//    c.AddPath(subject, ptSubject, closed);
+//    c.AddPath(clip, ptClip, true);
+//    Paths solution;
+//  
+//    if(!closed)
+//    {
+//        PolyTree polyTreeSolution = *new PolyTree();
+//        c.Execute(ctIntersection, polyTreeSolution, pftEvenOdd, pftEvenOdd);
+//        PolyTreeToPaths(polyTreeSolution, solution);
+//    } else
+//    {
+//        if (!c.Execute(ctIntersection, solution))
+//        {
+//            return false;
+//        }
+//    }
+//    
+//    for (unsigned int ii=0;ii<solution.size();ii++)
+//    {
+//        Path &outPoly = solution[ii];
+//        VectorRing outRing;
+//        for (unsigned jj=0;jj<outPoly.size();jj++)
+//        {
+//            IntPoint &outPt = outPoly[jj];
+//            outRing.push_back(Point2f(outPt.X/PolyScale,outPt.Y/PolyScale));
+//        }
+//     
+//        if ((closed && outRing.size() > 2) || (!closed && outRing.size() > 1))
+//            rets.push_back(outRing);
+//    }
     return true;
 }
 
